@@ -4,22 +4,17 @@
 <taglib>
   <tlib-version>1</tlib-version>
   <jsp-version>1</jsp-version>
-  <short-name>center</short-name>
-  <uri>WEB-INF/tld/healthcenter/update_center_detail.tld</uri>
+  <short-name>signup</short-name>
+  <uri>WEB-INF/tld/adminsignup.tld</uri>
   <tag>
-  	<name>update</name>  
-	<tag-class>org.health.health.UpDateCenterDetailsTagHandler</tag-class>
+  	<name>insert</name>  
+	<tag-class>org.health.administration.AddAdminTagHandler</tag-class>
  	 <attribute>  
 		<name>table</name>  
   		<required>true</required>  
   	</attribute>
   	<attribute>  
-		<name>value1</name>  
-  		<required>false</required> 
-  		<rtexprvalue>true</rtexprvalue>
-  	</attribute>
-  	<attribute>  
-		<name>value2</name>  
+		<name>value</name>  
   		<required>false</required> 
   		<rtexprvalue>true</rtexprvalue>
   	</attribute> 

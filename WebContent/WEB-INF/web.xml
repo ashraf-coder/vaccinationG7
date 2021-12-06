@@ -138,4 +138,89 @@
     <servlet-name>UpdateCenterDetails</servlet-name>
     <url-pattern>/update_center</url-pattern>
   </servlet-mapping>
+  
+  
+  
+  
+  
+  <servlet>
+    <servlet-name>BookerHomeServlet</servlet-name>
+    <servlet-class>org.health.administration.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookerHomeServlet</servlet-name>
+    <url-pattern>/booker_home</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BookerFormServlet</servlet-name>
+    <servlet-class>org.health.administration.BookerFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookerFormServlet</servlet-name>
+    <url-pattern>/booker_form</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BookerRegistrationServlet</servlet-name>
+    <servlet-class>org.health.administration.BookerRegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookerRegistrationServlet</servlet-name>
+    <url-pattern>/register_booker</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AdminFormServlet</servlet-name>
+    <servlet-class>org.health.administration.AdminFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminFormServlet</servlet-name>
+    <url-pattern>/admin_form</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AdminRegistrationServlet</servlet-name>
+    <servlet-class>org.health.administration.AdminRegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminRegistrationServlet</servlet-name>
+    <url-pattern>/register_admin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AuthenticationFormServlet</servlet-name>
+    <servlet-class>org.health.administration.AuthenticationFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthenticationFormServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AuthenticationServlet</servlet-name>
+    <servlet-class>org.health.administration.AuthenticationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthenticationServlet</servlet-name>
+    <url-pattern>/authenticate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PatientEmailServlet</servlet-name>
+    <servlet-class>org.health.administration.PatientEmailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientEmailServlet</servlet-name>
+    <url-pattern>/patient_email</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AdminHomeView</servlet-name>
+    <servlet-class>org.health.administration.AdminHomeView</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminHomeView</servlet-name>
+    <url-pattern>/admin_home_view</url-pattern>
+  </servlet-mapping>
 </web-app>

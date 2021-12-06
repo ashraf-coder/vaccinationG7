@@ -96,7 +96,7 @@ public class VaccinesTagHandler extends TagSupport {
 
 				  ResultSet  rs = s.getResultSet();
 				  
-				  out.println("<div class='container d-flex justify-content-center'>");
+				  out.println("<div class='container d-flex justify-content-center flex-wrap'>");
 					  while (rs.next()) {  
 		                 String name = rs.getString("name");
 		                 int id = rs.getInt("center_id");

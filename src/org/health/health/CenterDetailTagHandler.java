@@ -56,7 +56,6 @@ public class CenterDetailTagHandler extends TagSupport {
 				  while (rs.next()) { 
 					  String name = rs.getString("name");
 					  int id = rs.getInt("center_id");
-					  String name_number = name + id;
 					  int previous_month_patients_no = rs.getInt("previous_month_patients_no");
 					  out.println("<div class='container text-center d-flex justify-content-center align-items-center' style='height: 100vh'>");
 					  	out.println("<div>");
@@ -73,7 +72,7 @@ public class CenterDetailTagHandler extends TagSupport {
                 			patients_number = patients_number + 1;
                 		}
                 		out.println("<h5>Previous month vaccinated patients: <span>"+ patients_number +"</span></h5>");
-                		out.println("<h5>Previous month patients: <span><form action='update_center' method='POST'><input type='number' name='number' value="+ previous_month_patients_no +"></span><input type='submit' value='update'></form></h5>");
+                		out.println("<h5>Previous month patients: <span><form action='update_center' method='POST'><input type='number' style='display:none' name='center_id' value="+ id +"><input type='number' name='number' value="+ previous_month_patients_no +"></span><input type='submit' value='update'></form></h5>");
 					  	out.println("</div>");
 	                  out.println("</div>");   
 	         	  }
