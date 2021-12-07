@@ -1,6 +1,7 @@
 package org.health.administration;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,6 +10,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZonedDateTime;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.jsp.JspException;
@@ -66,10 +70,19 @@ public class LoginTagHandler extends TagSupport {
 				  int flag = 0;
 				 
 	             while (rs.next()) {  
-	                 String email = rs.getString("email");  
+	                 String email = rs.getString("email"); 
+	                 java.util.Date the_date = rs.getDate("date");
 	                 flag = 1;
 	                 out.println("<h1 style='color:green;'>You have Logged in successfully with the email "+email+"</h1>");
- 			         out.println("<h3>Click <a href='booking_form'>here</a> to start booking</h3>");
+	                 
+	                 java.util.Date tomorrowbutone = Date.from(java.time.ZonedDateTime.now().plusDays(1).toInstant());
+	                 java.util.Date today = Date.from(java.time.ZonedDateTime.now().minusDays(1).toInstant());
+	                 
+	                 if(the_date.after(today) && the_date.before(tomorrowbutone)){
+	                	 out.println("<h3>Email: Tomorrow is when you Booked to get the vaccine doze</h3>");
+	                 }
+	                 out.println("<h3>Click <a href='booking_form'>here</a> go to booking page</h3>");
+ 			         
 	             }  
 	             
 	             if (flag == 0){
@@ -88,6 +101,13 @@ public class LoginTagHandler extends TagSupport {
 	 	             while (rs1.next()) {  
 	 	                 String email = rs1.getString("email");  
 	 	                 flag1 = 1;
+	 	                 
+	 	                 int center_id = rs1.getInt("center_id");
+//	 	                 if(center_id == 0){
+//	 	                	 
+//	 	                 }else{
+//	 	                	 
+//	 	                 }
 	 	                 out.println("<h1 style='color:green;'>You have Logged in successfully with the email "+email+"</h1>");
 				         out.println("<h3>Click <a href='admin_home_view'>here</a> to start administration work</h3>");
 	 	             }

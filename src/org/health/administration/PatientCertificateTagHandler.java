@@ -54,8 +54,34 @@ public class PatientCertificateTagHandler extends TagSupport {
 				  ResultSet  rs = s.getResultSet();
 				  
 				  while (rs.next()) { 
-					  String name = rs.getString("name");    
-	                  out.println("<h1>" + name + "</h1>");   
+					  String name = rs.getString("name");
+					  String date_of_return = rs.getString("date_of_return");
+					  int id = rs.getInt("vaccine_id");
+	                  out.println("<div class='wrapper'>");
+		                  out.println("<div class='heading'>");
+		                  	out.println("<h1>CERTIFICATE OF VACCINATION</h1>");
+		                  out.println("</div>"); 
+		                  out.println("<div class='presented'>");
+		                  	out.println("This Certificate is presented to");
+		                  out.println("</div>");
+		                  out.println("<div class='patient_name'>");
+		                  	out.println(""+ name +"");
+		                  out.println("</div>");
+		                  out.println("<div class='presented'>");
+		                  	
+		                  String get_vaccines = "SELECT * FROM vaccines where vaccine_id = "+id;
+	                		Statement s1 = connection.createStatement();
+
+	      				  	s1.executeQuery (get_vaccines);
+	                		ResultSet  r = s1.getResultSet();
+	                		
+	                		String vaccine_name = "";
+	                		while (r.next()) {
+	          					vaccine_name = r.getString("name");
+	                		}
+		                  	
+		                  	out.println("For receiving the <i>"+ vaccine_name +"</i> vaccine and expected to return on the "+ date_of_return +" for the second dose");
+	                  out.println("</div>");  
 	         	  }
 		          
 				  rs.close ();

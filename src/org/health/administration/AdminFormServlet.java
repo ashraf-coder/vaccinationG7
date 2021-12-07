@@ -29,7 +29,7 @@ public class AdminFormServlet extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/admin/admin_home_view.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/register_admin.jsp");
 		dispatcher.forward(request, response);
 	}
 

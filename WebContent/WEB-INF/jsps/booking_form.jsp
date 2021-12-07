@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@page language="java" import="java.util.*" %>
-<%@ taglib uri="WEB-INF/tld/booking/vaccine.tld" prefix="vaccination" %>
+<%@ taglib uri="WEB-INF/tld/booking/vaccine1.tld" prefix="vaccination" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>

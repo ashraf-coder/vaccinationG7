@@ -22,6 +22,7 @@ public class RegisterTagHandler extends TagSupport {
 	private static String value4;
 	private static String value5;
 	private static String value6;
+	private static String value7;
 	
 	private String jdbcURL = "jdbc:mysql://localhost:3306/vaccination_db?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	private String jdbcUsername = "root";
@@ -49,13 +50,15 @@ public class RegisterTagHandler extends TagSupport {
 	public void setValue6(String value6) {  
 	    this.value6 = value6;  
 	}
+	public void setValue7(String value7) {  
+	    this.value7 = value7;  
+	}
 	
 	public int doStartTag() throws JspException {
 		Connection connection = null;
 		
 	    JspWriter out=pageContext.getOut();//returns the instance of JspWriter  
 	    try {
-
 			 // Load the database driver
 
 			  Class.forName(jdbcDriver);
@@ -82,22 +85,24 @@ public class RegisterTagHandler extends TagSupport {
 			 	  
 			 	  
 			 	String sql = "INSERT INTO patients" +
-				            "  (email, nin, name, doa, batch_no, vaccine_id, date_of_return) VALUES " +
-				            " (?, ?, ?, ?, ?, ?, ?);";
+				            "  (email, nin, name, doa, batch_no, vaccine_id, date_of_return, center_id) VALUES " +
+				            " (?, ?, ?, ?, ?, ?, ?, ?);";
 
 				PreparedStatement preparedStatement = connection.prepareStatement(sql);
 	            preparedStatement.setString(1, value1);
 	            preparedStatement.setString(2, value2);
 	            preparedStatement.setString(3, value3);
 	            preparedStatement.setString(4, value4);
-	            preparedStatement.setInt(5, Integer.parseInt(value5)); //center
+	            preparedStatement.setInt(5, Integer.parseInt(value5));
 	            preparedStatement.setInt(6, Integer.parseInt(value6));
 	            preparedStatement.setString(7, date2.toString());
+	            preparedStatement.setInt(8, Integer.parseInt(value7));
 	            
 	            
 	            int i = preparedStatement.executeUpdate();
 	            if(i>0){
-	            	out.println("<h1>SUCCESFULLY ADDED PATIENT</h1>");
+	            	out.println("<h1 style='color:green;'>patient added successfully</h1>");
+		            out.println("<h3><a href='view_patients'>back</a></h3>");
 	            }
 
 		}catch(Exception e){

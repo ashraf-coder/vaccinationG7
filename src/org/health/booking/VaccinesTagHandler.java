@@ -232,7 +232,7 @@ public class VaccinesTagHandler extends TagSupport {
 
 				  ResultSet  rs = s.getResultSet();
 				  
-				  out.println("<div class='container d-flex justify-content-center'>");
+				  out.println("<div class='container d-flex justify-content-center flex-wrap'>");
 					  while (rs.next()) {  
 		                 String name = rs.getString("name");
 		                 int id = rs.getInt("center_id");
@@ -324,6 +324,7 @@ public class VaccinesTagHandler extends TagSupport {
 		}
 		if (table == "patients") {
 			Connection connection = null;
+			int total_population = 4000; //total poplation in uganda
 			
 		    JspWriter out=pageContext.getOut();//returns the instance of JspWriter  
 		    try {
@@ -335,7 +336,22 @@ public class VaccinesTagHandler extends TagSupport {
 				  // Get a Connection to the database
 
 				  connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword); 
+				  
+				  String sql1 = "SELECT * FROM "+table;
 
+				  Statement s1 = connection.createStatement();
+
+				  s1.executeQuery (sql1);
+
+				  ResultSet  rs1 = s1.getResultSet();
+				  
+				  float no_to_hit;
+				  float sum = 0;
+				  while (rs1.next()) {  
+					 sum = sum + 1; 
+				  }
+				  no_to_hit = (sum/total_population)*100;
+				  
 				  //Select the data from the database
 
 				  String sql = "SELECT * FROM "+table;
@@ -345,7 +361,7 @@ public class VaccinesTagHandler extends TagSupport {
 				  s.executeQuery (sql);
 
 				  ResultSet  rs = s.getResultSet();
-				   
+				  out.println("<h1>The percentage so far vaccinated = "+ no_to_hit + "%</h1>");
 				  out.println("<table border=1 >");  
 		             out.println("<tr><th>Email</th><th>NIN</th><th>NAME</th><th>Date Of Administration</th><th>Batch Number</th><th>View Patient Certificate</th><tr>");  
 		             while (rs.next()) {  

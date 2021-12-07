@@ -1,4 +1,4 @@
-package com.health.vaccine;
+package org.health.vaccine;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

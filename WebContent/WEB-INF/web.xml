@@ -3,7 +3,7 @@
   <display-name></display-name>
   <servlet>
     <servlet-name>VaccineServlet</servlet-name>
-    <servlet-class>com.health.vaccine.VaccineServlet</servlet-class>
+    <servlet-class>org.health.vaccine.VaccineServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>VaccineServlet</servlet-name>
@@ -11,7 +11,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>homeServlet</servlet-name>
-    <servlet-class>com.health.vaccine.HomeServlet</servlet-class>
+    <servlet-class>org.health.vaccine.HomeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>homeServlet</servlet-name>
@@ -19,7 +19,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>AddVaccineServlet</servlet-name>
-    <servlet-class>com.health.vaccine.AddVaccineServlet</servlet-class>
+    <servlet-class>org.health.vaccine.AddVaccineServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddVaccineServlet</servlet-name>
@@ -27,7 +27,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>DistributeVaccinesServlet</servlet-name>
-    <servlet-class>com.health.vaccine.DistributeVaccinesServlet</servlet-class>
+    <servlet-class>org.health.vaccine.DistributeVaccinesServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DistributeVaccinesServlet</servlet-name>
@@ -204,15 +204,6 @@
   <servlet-mapping>
     <servlet-name>AuthenticationServlet</servlet-name>
     <url-pattern>/authenticate</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <servlet-name>PatientEmailServlet</servlet-name>
-    <servlet-class>org.health.administration.PatientEmailServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>PatientEmailServlet</servlet-name>
-    <url-pattern>/patient_email</url-pattern>
   </servlet-mapping>
   
   <servlet>

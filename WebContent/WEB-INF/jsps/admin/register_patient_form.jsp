@@ -28,9 +28,12 @@
 		<input  id="batch_no" name="batch_no" class="" type="text"><br>
 		<label  for="vaccine">Vaccine</label>
 		<select name="vaccine_id">
-		<vaccination:select table="vaccines"/>
+			<vaccination:select table="vaccines"/>
 		</select><br>
-		
+		<label  for="center">health center</label>
+		<select name="center">
+			<vaccination:select table="health_centers"/>
+		</select><br>
 		<input type="submit" value="REGISTER">
 	</form>	
 </div>

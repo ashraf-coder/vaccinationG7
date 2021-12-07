@@ -13,9 +13,10 @@
 	<div class="bg-light pl-5 pt-5" style="height: 50vh;">VACCINATE</div>
 </div>
 <div class="d-flex justify-content-end p-2">
-	<a href="add_vaccine" class="text-decoration-none"><button class="btn btn-primary">vaccines</button></a>
-	<a href="add_vaccine" class="text-decoration-none ml-2"><button class="btn btn-primary">health centers</button></a>
-	<a href="add_vaccine" class="text-decoration-none ml-2"><button class="btn btn-primary">add hospital admin</button></a>
+	<a href="view_patients" class="text-decoration-none"><button class="btn btn-primary">patients</button></a>
+	<a href="home" class="text-decoration-none ml-2"><button class="btn btn-primary">vaccines</button></a>
+	<a href="center_home" class="text-decoration-none ml-2"><button class="btn btn-primary">health centers</button></a>
+	<a href="admin_form" class="text-decoration-none ml-2"><button class="btn btn-primary">add hospital admin</button></a>
 </div>
 
 <script src="bootstrap/js/jquery.min.js"></script>

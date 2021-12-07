@@ -4,20 +4,15 @@
 <taglib>
   <tlib-version>1</tlib-version>
   <jsp-version>1</jsp-version>
-  <short-name>vaccines</short-name>
-  <uri>WEB-INF/tld/booking/vaccine.tld</uri>
+  <short-name>login</short-name>
+  <uri>WEB-INF/tld/login.tld</uri>
   <tag>
   	<name>select</name>  
-	<tag-class>org.health.administration.GeneralTagHandler</tag-class>
+	<tag-class>org.health.vaccine.DistributionTagHandler</tag-class>
  	 <attribute>  
 		<name>table</name>  
   		<required>true</required>  
   	</attribute>
-  	<attribute>  
-		<name>where</name>  
-  		<required>false</required> 
-  		<rtexprvalue>true</rtexprvalue> 
-  	</attribute> 
   </tag>
 </taglib>
 

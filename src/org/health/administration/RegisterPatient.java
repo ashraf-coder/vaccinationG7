@@ -36,6 +36,7 @@ public class RegisterPatient extends HttpServlet {
 		String doa = request.getParameter("doa");
 		String batch_no = request.getParameter("batch_no");
 		String vaccine = request.getParameter("vaccine_id");
+		String center = request.getParameter("center");
 		
 		request.setAttribute("email", email);
 		request.setAttribute("nin", nin);
@@ -43,6 +44,7 @@ public class RegisterPatient extends HttpServlet {
 		request.setAttribute("doa", doa);
 		request.setAttribute("batch_no", batch_no);
 		request.setAttribute("vaccine_id", vaccine);
+		request.setAttribute("center_id", center);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsps/admin/patient_register.jsp");
 		dispatcher.forward(request, response);

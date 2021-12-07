@@ -5,10 +5,10 @@
   <tlib-version>1</tlib-version>
   <jsp-version>1</jsp-version>
   <short-name>vaccines</short-name>
-  <uri>WEB-INF/tld/booking/vaccine.tld</uri>
+  <uri>WEB-INF/tld/booking/vaccine1.tld</uri>
   <tag>
   	<name>select</name>  
-	<tag-class>org.health.administration.GeneralTagHandler</tag-class>
+	<tag-class>org.health.booking.VaccinesTagHandler</tag-class>
  	 <attribute>  
 		<name>table</name>  
   		<required>true</required>  

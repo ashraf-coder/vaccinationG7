@@ -8,7 +8,7 @@
   <uri>WEB-INF/tld/vaccine2.tld</uri>
   <tag>
   	<name>select</name>  
-	<tag-class>com.health.vaccine.VaccinesTagHandler</tag-class>
+	<tag-class>org.health.vaccine.VaccinesTagHandler</tag-class>
  	 <attribute>  
 		<name>table</name>  
   		<required>true</required>  

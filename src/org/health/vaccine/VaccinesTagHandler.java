@@ -1,4 +1,4 @@
-package com.health.vaccine;
+package org.health.vaccine;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +13,6 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.TagSupport;
 
-import com.productManagement.Product;
 
 
 public class VaccinesTagHandler extends TagSupport {

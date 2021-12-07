@@ -1,4 +1,4 @@
-package com.health.vaccine;
+package org.health.vaccine;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -62,6 +62,8 @@ public class DistributeVaccinesServlet extends HttpServlet {
 			  ResultSet  rs = s.getResultSet();
 			  
 	          
+			  
+			  
 			  rs.close ();
 		
 			  s.close ();
